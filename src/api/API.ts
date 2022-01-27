@@ -5,7 +5,7 @@ import axios from 'axios';
 // };
 
 export const axiosInstance = axios.create({
-    baseURL: 'https://www.omdbapi.com',
+    baseURL: 'http://www.omdbapi.com',
 });
 
 
