@@ -1,3 +1,10 @@
+Educational project Social network on React + TypeScript
+
+Link to open at https://neverwinternights.github.io/FilmsSearch/
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
