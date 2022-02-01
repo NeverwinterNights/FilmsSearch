@@ -87,6 +87,10 @@
   justify-content: center;
   text-decoration: none;
   margin: 20px 0;
+  transition:  all 0.3s ease 0s;
+  &:hover{
+    background: #272951;
+  }
 }
 
 .film__wrapper {

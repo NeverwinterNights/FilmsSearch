@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import styles from "./SearchType.module.scss";
 
 export const SearchType = React.memo(() => {
 
@@ -46,8 +47,8 @@ export const SearchType = React.memo(() => {
             <h3><p>Search by type:</p></h3>
             <input type="text" value={searchNameByType ? searchNameByType : ""}
                    onChange={searchButtonInput}/>
-            <button onClick={searchByType} data-t='movie'>Movie</button>
-            <button onClick={searchByType} data-t='series'>Series</button>
+            <button className={styles.btn} onClick={searchByType} data-t='movie'>Movie</button>
+            <button className={styles.btn}  onClick={searchByType} data-t='series'>Series</button>
         </div>
     );
 });
