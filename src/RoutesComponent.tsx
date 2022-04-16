@@ -3,26 +3,34 @@ import {Route, Routes} from "react-router-dom";
 import {Titles} from "./components/titles/Titles";
 import {Main} from "./components/main/Main";
 import {Category} from "./components/category/Category";
-import {Pagination} from "./components/pagination/Pagination";
 import {Poster} from "./components/poster/Poster";
 
 
 const RoutesComponent = () => {
 
+    const routes = [{
+        path: '/',
+        component: <Main/>,
+    }, {
+        path: '/main',
+        component: <Main/>,
+    }, {
+        path: '/titles/:filmName',
+        component: <Titles/>,
+    }, {
+        path: '/category/:movieName',
+        component: <Category/>,
+    }, {
+        path: '/poster',
+        component: <Poster/>,
+    }
+    ];
 
+    const routeComponents = routes.map(({path, component}, key) => <Route path={path} element={component} key={key} />);
+    console.log(routeComponents);
     return (
         <Routes>
-
-            <Route path={"/"} element={<Main/>}/>
-            <Route path={"/main"} element={<Main/>}/>
-            <Route path={"/titles/:filmName"} element={<Titles/>}/>
-            {/*<Route path={"/titles/:filmName"} element={<Pagination/>}/>*/}
-            <Route path={"/category/:movieName"} element={<Category/>}/>
-
-            <Route path={"/poster"} element={<Poster/>}/>
-
-            {/*<Route path={"/searchType"} element={<SearchType />} />*/}
-
+            {routeComponents}
         </Routes>
     );
 };

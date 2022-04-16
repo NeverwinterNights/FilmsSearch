@@ -59,6 +59,7 @@ export const Titles = React.memo(() => {
 
 
     const getPoster = (title: string) => {
+
         API.getPoster(title)
             .then(({data}) => {
                 const {Poster, Response, Error} = data
