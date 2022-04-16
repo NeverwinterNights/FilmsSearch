@@ -6,7 +6,6 @@ import {Location} from "history";
 
 interface LocationParams extends Location {
     state: string
-//FilmType[] | null
 }
 
 
@@ -14,7 +13,6 @@ export const Poster = React.memo(() => {
 
     const location = useLocation() as LocationParams
     const navigate  = useNavigate();
-
 
     return (
         <div className={styles.main}>

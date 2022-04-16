@@ -12,7 +12,6 @@ interface LocationParams extends Location {
     state: {
         searchResult: FilmType[] | null
     }
-//FilmType[] | null
 }
 
 
@@ -23,14 +22,9 @@ export const Titles = React.memo(() => {
     const [totalPagesCount, setTotalPagesCount] = useState<number>(0);
 
 
-    // const location = useLocation()
-
 
     const [films, setFilms] = useState<FilmType[] | null>(null);
     const [poster, setPoster] = useState<string>("");
-
-    // const PosterContext = React.createContext(poster);
-    // const context = useContext(PosterContext);
 
 
     const pageHandler = (num: number) => {
@@ -72,7 +66,6 @@ export const Titles = React.memo(() => {
     }
 
 
-
     if (poster) {
         return <Navigate state={poster} to={'/poster'}/>;
     }
@@ -107,7 +100,6 @@ export const Titles = React.memo(() => {
                     })}
                 </div>
             </div>
-
             <Pagination totalPagesCount={totalPagesCount} pageHandler={pageHandler}
                         page={page}/>
         </div>

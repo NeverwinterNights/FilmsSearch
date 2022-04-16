@@ -6,7 +6,6 @@ export const SearchType = React.memo(() => {
 
     const dataLocalStorage: string | null = localStorage.getItem('name')
     const [searchNameByType, setSearchNameByType] = useState<string | null>(dataLocalStorage);
-    // const [searchResultByType, setSearchResultByType] = useState<FilmType[] | null>(null);
     const nav = useNavigate()
     const [type, setType] = useState<string>("");
 
@@ -34,13 +33,7 @@ export const SearchType = React.memo(() => {
         if (dataLocalStorage) {
             setSearchNameByType(dataLocalStorage)
         }
-
     })
-
-    // if (searchResultByType) {
-    //     return <Navigate state={{type}} to={'/category'}/>;
-    // }
-
 
     return (
         <div>

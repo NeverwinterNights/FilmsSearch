@@ -29,9 +29,6 @@ export const Category = React.memo(() => {
 
 
     useEffect(() => {
-
-
-        // const type: string = e.currentTarget.dataset.t ? e.currentTarget.dataset.t : '';
         API.searchFilmsByType(movieName ? movieName : "", location.state, page)
             .then(({data}) => {
                 const {Search, Response, Error, totalResults} = data
@@ -47,8 +44,6 @@ export const Category = React.memo(() => {
             .catch((error) => {
                 alert(error)
             })
-
-        // setFilms(location.state.searchResultByType)
     }, [movieName, location.state, page])
 
 
@@ -82,7 +77,6 @@ export const Category = React.memo(() => {
                         return (
                             <div className={styles.column} key={index}>
                                 <div className={styles.wrapper}>
-                                    {/*<div key={index} className={"wrapper"}>*/}
                                     <div className={styles.title}>{film.Title}</div>
                                     <div className={styles.year}>{film.Year}</div>
                                     <div className={styles.type}>{film.Type}</div>

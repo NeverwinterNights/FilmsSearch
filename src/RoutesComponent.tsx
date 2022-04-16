@@ -23,11 +23,9 @@ const RoutesComponent = () => {
     }, {
         path: '/poster',
         component: <Poster/>,
-    }
-    ];
+    }];
 
-    const routeComponents = routes.map(({path, component}, key) => <Route path={path} element={component} key={key} />);
-    console.log(routeComponents);
+    const routeComponents = routes.map(({path, component}, key) => <Route path={path} element={component} key={key}/>);
     return (
         <Routes>
             {routeComponents}

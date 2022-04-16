@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import styles from "./Pagination.module.scss";
 
 type  PaginationPropsType = {
@@ -13,10 +13,9 @@ export const Pagination = ({
                                pageHandler,
                                page
                            }: PaginationPropsType) => {
-    // const [currentPage, setCurrentPage] = useState<number>(1);
 
-    let pagesCount = Math.ceil(totalPagesCount / 10)/* Math.ceil округляет число в
-     большую сторону*/
+    let pagesCount = Math.ceil(totalPagesCount / 10)
+
     let pages: Array<number> = []
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
@@ -42,10 +41,9 @@ export const Pagination = ({
                 {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber).map((t) => {
                     return <span key={t}
                                  className={page === t ? styles.selectedPage : styles.page}
-                                 onClick={()=> {changePageHandler(t)}}
-                                 // onClick={() => {
-                                 //     OnPageHandler(t)
-                                 // }}
+                                 onClick={() => {
+                                     changePageHandler(t)
+                                 }}
 
                     >{t}</span>
                 })}
