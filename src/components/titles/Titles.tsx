@@ -82,11 +82,7 @@ export const Titles = React.memo(() => {
                     {films && films.map((film, index) => {
                         return (
                             <div className={styles.column} key={index}>
-                                {/*<div onClick={() => {*/}
-                                {/*    getPoster(film.Title)*/}
-                                {/*}} className={styles.wrapper}>*/}
                                 <div className={styles.wrapper}>
-                                    {/*<div key={index} className={"wrapper"}>*/}
                                     <span className={styles.title}>{film.Title}</span>
                                     <div className={styles.year}>{film.Year}</div>
                                     <div className={styles.type}>{film.Type}</div>
